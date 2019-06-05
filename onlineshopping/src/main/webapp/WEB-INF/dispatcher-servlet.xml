@@ -9,7 +9,9 @@
 
 
 
-<context:component-scan base-package="com.kir.onlineshopping.controller"></context:component-scan>
+<context:component-scan base-package="com.kir.onlineshopping.controller"/>
+<context:component-scan base-package="com.kir.shoppingbackend.daoimpl"/>
+
 <bean id="viewResolver"
       class="org.springframework.web.servlet.view.InternalResourceViewResolver">
       

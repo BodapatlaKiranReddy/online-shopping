@@ -42,35 +42,41 @@
 
 		<!-- Page content  -->
 		<div class="content">
-    <!-- Loading the Home content  -->
-    
-    <c:if test= "${userClickHome == true }">
-   <%@include file = "home.jsp" %>
-   </c:if>
-   
-   <!-- Load when user clicks about  -->
-   <c:if test= "${userClickAbout == true }">
-   <%@include file = "about.jsp" %>
-   </c:if>
-   
-    <c:if test= "${userClickContact == true }">
-   <%@include file = "contact.jsp" %>
-   </c:if>
-   </div>
+			<!-- Loading the Home content  -->
 
-   <!-- footer comes here -->
-   <%@include file= "./shared/footer.jsp" %>
-   
-    <!-- /.container -->
+			<c:if test="${userClickHome == true }">
+				<%@include file="home.jsp"%>
+			</c:if>
 
-    <!-- JavaScript -->
-    <script src="${js}/jquery-1.10.2.js"></script>
-    
-    <!-- self coded javascript -->
-    <script src="${js}/myapp.js"></script>
+			<!-- Load when user clicks about  -->
+			<c:if test="${userClickAbout == true }">
+				<%@include file="about.jsp"%>
+			</c:if>
+
+           <!-- Load only when user clicks contacts  -->
+			<c:if test="${userClickContact == true }">
+				<%@include file="contact.jsp"%>
+			</c:if>
+			
+			<!-- Load only when user clicks contacts  -->
+			<c:if test="${userClickAllProducts  == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+		</div>
+
+		<!-- footer comes here -->
+		<%@include file="./shared/footer.jsp"%>
+
+		<!-- /.container -->
+
+		<!-- JavaScript -->
+		<script src="${js}/jquery-1.10.2.js"></script>
+
+		<!-- self coded javascript -->
+		<script src="${js}/myapp.js"></script>
 
 
-</div>
+	</div>
 
 </body>
 </html>

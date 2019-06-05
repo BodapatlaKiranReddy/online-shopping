@@ -14,8 +14,17 @@
 		<spring.version>4.3.6.RELEASE</spring.version>
 	</properties>
 
-	<!-- java ee api -->
+	
 	<dependencies>
+	<!-- Linking backend  -->
+	<dependency>
+	<groupId>com.kir</groupId>
+  <artifactId>shoppingbackend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	
+		
+		<!-- java ee api -->
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
